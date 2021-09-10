@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
-<title>Filtered From Domain</title>
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<title>Performance Analyzer</title>
 <style type="text/css">
 
 /*
@@ -360,59 +360,115 @@ ul.auto-toc {
 </style>
 </head>
 <body>
-<div class="document" id="filtered-from-domain">
-<h1 class="title">Filtered From Domain</h1>
+<div class="document" id="performance-analyzer">
+<h1 class="title">Performance Analyzer</h1>
 
-<p><a class="reference external" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external" href="https://github.com/Smile-SA/odoo_addons/tree/13.0/smile_filtered_from_domain"><img alt="Smile-SA/odoo_addons" src="https://img.shields.io/badge/github-Smile_SA%2Fodoo_addons-lightgray.png?logo=github" /></a></p>
-<p>This module allows to filter records from a search domain.</p>
-<p><strong>Example with filtered_from_domain:</strong></p>
-<pre class="code python literal-block">
-<span class="name">records</span><span class="operator">.</span><span class="name">filtered_from_domain</span><span class="punctuation">([</span>
-    <span class="punctuation">(</span><span class="literal string single">'state'</span><span class="punctuation">,</span> <span class="literal string single">'='</span><span class="punctuation">,</span> <span class="literal string single">'draft'</span><span class="punctuation">),</span>
-    <span class="punctuation">(</span><span class="literal string single">'line_ids.product_id.name'</span><span class="punctuation">,</span> <span class="literal string single">'='</span><span class="punctuation">,</span> <span class="literal string single">'My product'</span><span class="punctuation">),</span>
-<span class="punctuation">])</span>
-</pre>
-<p><strong>Example with filtered:</strong></p>
-<pre class="code python literal-block">
-<span class="name">records</span><span class="operator">.</span><span class="name">filtered</span><span class="punctuation">(</span><span class="keyword">lambda</span> <span class="name">r</span><span class="punctuation">:</span> <span class="name">r</span><span class="operator">.</span><span class="name">state</span> <span class="operator">==</span> <span class="literal string single">'draft'</span> <span class="operator word">and</span> <span class="name">line_ids</span><span class="operator">.</span><span class="name">product_id</span><span class="operator">.</span><span class="name">name</span> <span class="operator">==</span> <span class="literal string single">'My product'</span><span class="punctuation">)</span>
-</pre>
+<p><a class="reference external" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external" href="https://github.com/Smile-SA/odoo_addons/tree/14.0/smile_perf_analyzer"><img alt="Smile-SA/odoo_addons" src="https://img.shields.io/badge/github-Smile_SA%2Fodoo_addons-lightgray.png?logo=github" /></a></p>
+<p>Features :</p>
+<p>This module log in function of logging rules:</p>
+<ul class="simple">
+<li>each JSON-RPC / XML-RPC call linked to a model:
+db, datetime, model, method, user, total time, db time, args, result</li>
+<li>Python method profiling</li>
+<li>SQL queries stats</li>
+</ul>
+<p>A logging rule is defined directly via the user interface
+(menu: Settings &gt; Technical &gt; Performance &gt; Rules)
+and it's applied without restarting Odoo server.</p>
+<p>To hide the database _perf created during the installation :</p>
+<ul class="simple">
+<li>add &quot;dbfilter = (?!.*_perf$)&quot; in your config file.</li>
+</ul>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#bug-tracker" id="id1">Bug Tracker</a></li>
-<li><a class="reference internal" href="#credits" id="id2">Credits</a><ul>
-<li><a class="reference internal" href="#authors" id="id3">Authors</a></li>
-<li><a class="reference internal" href="#contributors" id="id4">Contributors</a></li>
-<li><a class="reference internal" href="#maintainers" id="id5">Maintainers</a></li>
+<li><a class="reference internal" href="#usage" id="id1">Usage</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="id2">Bug Tracker</a></li>
+<li><a class="reference internal" href="#gdpr-eu-privacy" id="id3">GDPR / EU Privacy</a></li>
+<li><a class="reference internal" href="#credits" id="id4">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="id5">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="id6">Contributors</a></li>
+<li><a class="reference internal" href="#maintainer" id="id7">Maintainer</a></li>
 </ul>
 </li>
 </ul>
 </div>
+<div class="section" id="usage">
+<h1><a class="toc-backref" href="#id1">Usage</a></h1>
+<p>To create a rule :</p>
+<ol class="arabic simple">
+<li>Go to <tt class="docutils literal">Settings &gt; Technical &gt; Performance&gt; Rules</tt> menu :</li>
+</ol>
+<ul class="simple">
+<li>In this example we will create a rule for Administrator account in sale.order module :</li>
+</ul>
+<blockquote>
+<p>We specify :</p>
+<blockquote>
+<ol class="loweralpha simple">
+<li>Methods,</li>
+<li>Slow RPC calls - Min. duration,</li>
+<li>Slow SQL requests - Min. duration,</li>
+<li>Slow field's recomputation - Min. duration</li>
+<li>Profile Python methods,</li>
+<li>Log SQL requests</li>
+</ol>
+</blockquote>
+</blockquote>
+<div class="figure">
+<img alt="rule form" src="rule_form.png" style="width: 900px;" />
+</div>
+<ol class="arabic simple" start="2">
+<li>The rule will be added to the rules :</li>
+</ol>
+<div class="figure">
+<img alt="rules" src="rules.png" style="width: 900px;" />
+</div>
+<ol class="arabic simple" start="3">
+<li>Then, when the Administrator executes one of the methods declared in the created rule, Performance Analyzer will record automatically :</li>
+</ol>
+<ul class="simple">
+<li>Date</li>
+<li>Method</li>
+<li>SQL requests time</li>
+<li>SQL requests count</li>
+<li>Total Time, etc</li>
+</ul>
+<p>To show the Logs :</p>
+<ol class="arabic simple" start="4">
+<li>Go to <tt class="docutils literal">Settings &gt; Technical &gt; Performance</tt>&gt; Logs menu :</li>
+</ol>
+<div class="figure">
+<img alt="logs" src="logs.png" style="width: 900px;" />
+</div>
+</div>
 <div class="section" id="bug-tracker">
-<h1><a class="toc-backref" href="#id1">Bug Tracker</a></h1>
+<h1><a class="toc-backref" href="#id2">Bug Tracker</a></h1>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/Smile-SA/odoo_addons/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
-If you spotted it first, help us smashing it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/Smile-SA/odoo_addons/issues/new?body=module:%20smile_filtered_from_domain%0Aversion:%2012.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+If you spotted it first, help us smashing it by providing a detailed and welcomed feedback
+<a class="reference external" href="https://github.com/Smile-SA/odoo_addons/issues/new?body=module:%20smile_perf_analyzer%0Aversion:%2014.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">here</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
+<div class="section" id="gdpr-eu-privacy">
+<h1><a class="toc-backref" href="#id3">GDPR / EU Privacy</a></h1>
+<p>This addons does not collect any data and does not set any browser cookies.</p>
+</div>
 <div class="section" id="credits">
-<h1><a class="toc-backref" href="#id2">Credits</a></h1>
+<h1><a class="toc-backref" href="#id4">Credits</a></h1>
 <div class="section" id="authors">
-<h2><a class="toc-backref" href="#id3">Authors</a></h2>
-<ul class="simple">
-<li>Smile SA</li>
-</ul>
+<h2><a class="toc-backref" href="#id5">Authors</a></h2>
+<p>Smile SA</p>
 </div>
 <div class="section" id="contributors">
-<h2><a class="toc-backref" href="#id4">Contributors</a></h2>
+<h2><a class="toc-backref" href="#id6">Contributors</a></h2>
 <ul class="simple">
-<li>Corentin Pouhet-Brunerie</li>
-<li>Wafaa Jaouahar</li>
+<li>Corentin POUHET-BRUNERIE</li>
+<li>Wafaa JAOUAHAR</li>
 </ul>
 </div>
-<div class="section" id="maintainers">
-<h2><a class="toc-backref" href="#id5">Maintainers</a></h2>
+<div class="section" id="maintainer">
+<h2><a class="toc-backref" href="#id7">Maintainer</a></h2>
 <p>This module is maintained by the Smile SA.</p>
 <p>Since 1991 Smile has been a pioneer of technology and also the European expert in open source solutions.</p>
 <a class="reference external image-reference" href="http://smile.fr"><img alt="Smile SA" src="https://avatars0.githubusercontent.com/u/572339?s=200&amp;v=4" /></a>

@@ -12,7 +12,6 @@ Smile Base
 |badge2| |badge3|
 
 * Install and make French the default language
-* Disable the scheduled action "Update Notification" which sends companies and users info to Odoo S.A.
 * Activate access logs for ir.translation object
 * Correct date and time format for French language
 * Review the menu "Applications"
@@ -46,9 +45,6 @@ To add a colored ribbon, definied with RGBa, add in your configuration file:
 
 To display database name inside the colored ribbon add in your configuration file:
     * server.environment.display_dbname_in_ribbon = True
-
-To enable sending of companies and users info to Odoo S.A., add in your configuration file:
-    * enable_publisher_warranty_contract_notification = True
 
 
 Bug Tracker

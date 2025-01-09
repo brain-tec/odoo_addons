@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="attributes_mapping_tree">
+        <field name="name">attributes.mapping.tree.view</field>
+        <field name="model">attributes.mapping</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="field_name"/>
+                <field name="creation_requirement"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_attributes_mapping" model="ir.actions.act_window">
+        <field name="name">Attributes Mapping</field>
+        <field name="res_model">attributes.mapping</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="menu_cas_parameter_root"
+              name="CAS Authentification"
+              action="smile_auth_cas.action_cas_parameter"
+              parent="base.menu_ir_property"
+              sequence="15"/>
+</odoo>

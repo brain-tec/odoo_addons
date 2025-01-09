@@ -1,0 +1,16 @@
+<odoo>
+
+    <template id="login_error" name="Error">
+        <t t-call="web.login_layout">
+
+                <p class="alert alert-danger" t-if="message" role="status">
+                    <t t-esc="message"/>
+                </p>
+              <div class="pb16 pt16 s_btn text-center">
+              <a href="/web/login" class="btn btn-lg" style="background-color:#F16621;color:white" data-original-title="" title="" aria-describedby="tooltip758591">Try again<i class="fa fa-1x fa-arrow-circle-right fa-fw ml-1"/> </a>
+              <a href="/web/session/logout" class="btn btn-lg" style="margin-top:1em;background-color:#F16621;color:white" data-original-title="" title="" aria-describedby="tooltip758591">Logout<i class="fa fa-1x fa-times-circle fa-fw ml-1"/> </a>
+              </div>
+              </t>
+    </template>
+
+</odoo>

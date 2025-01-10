@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_attributes_mapping_full,access_attributes_mapping_full,model_attributes_mapping,smile_auth_cas.cas_parameter_access,1,1,1,1
+access_attributes_mapping_base_user,access_attributes_mapping_base_user,model_attributes_mapping,base.group_user,1,0,0,0
+access_cas_parameter_full,access_cas_parameter_full,model_cas_parameter,smile_auth_cas.cas_parameter_access,1,1,1,1
+access_cas_parameter_base_user,access_cas_parameter_base_user,model_cas_parameter,base.group_user,1,0,0,0
+access_cas_token_base_user,access_cas_token_base_user,model_cas_token,base.group_user,1,1,1,1

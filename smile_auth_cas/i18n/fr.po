@@ -1,0 +1,243 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* smile_auth_cas
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-14 09:17+0000\n"
+"PO-Revision-Date: 2022-09-14 09:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__active
+msgid "Active"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,help:smile_auth_cas.field_cas_parameter__update_user_attributes
+msgid ""
+"Allow to define if attributes (name, firstname) gived by CAS             to "
+"login have to update Odoo datas"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__allowed_sidebar_xml_ids
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__allowed_sidebar_xml_ids
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__allowed_sidebar_xml_ids
+msgid "Allowed Sidebar Xml"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.constraint,message:smile_auth_cas.constraint_attributes_mapping_field_name_parameter_uniq
+msgid "An Odoo field can be use only one time."
+msgstr ""
+
+#. module: smile_auth_cas
+#: code:addons/smile_auth_cas/models/res_users.py:0
+#, python-format
+msgid "Another user is already registered using this login."
+msgstr "Il existe déjà un utilisateur enregistré avec ce login."
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__attachment_ids
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__attachment_ids
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__attachment_ids
+msgid "Attachments"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model,name:smile_auth_cas.model_attributes_mapping
+msgid "Attribute mapping"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__name
+msgid "Attribute name"
+msgstr "Nom de l'attribut"
+
+#. module: smile_auth_cas
+#: model:ir.actions.act_window,name:smile_auth_cas.action_attributes_mapping
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__attributes_mapping_ids
+msgid "Attributes Mapping"
+msgstr "Attributs du mapping"
+
+#. module: smile_auth_cas
+#: model:ir.ui.menu,name:smile_auth_cas.menu_cas_parameter_root
+msgid "CAS Authentification"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.actions.act_window,name:smile_auth_cas.action_cas_parameter
+msgid "CAS Parameter"
+msgstr "Paramètres CAS"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__cas_server_url
+msgid "CAS server URL"
+msgstr "URL serveur CAS"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__cas_parameter_id
+msgid "Cas Parameter"
+msgstr "Paramètres CAS"
+
+#. module: smile_auth_cas
+#: model:res.groups,name:smile_auth_cas.cas_parameter_access
+msgid "Cas Parameter Access"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__cas_version
+msgid "Cas Version"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model,name:smile_auth_cas.model_cas_parameter
+msgid "Cas parameter"
+msgstr "Parmètres CAS"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__create_user_if_non_exists
+msgid "Create user if non exists"
+msgstr "Création utilisateur automatique"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__create_uid
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__create_uid
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__create_date
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__create_date
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__display_name
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__display_name
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: smile_auth_cas
+#: code:addons/smile_auth_cas/models/res_users.py:0
+#, python-format
+msgid "Error append during user creation: %s "
+msgstr "Erreur lors de la création d'utilisateur: %s "
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__id
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__id
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__id
+msgid "ID"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping____last_update
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter____last_update
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__write_uid
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__write_uid
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__write_date
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__write_date
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model_terms:ir.ui.view,arch_db:smile_auth_cas.login_error
+msgid "Logout<i class=\"fa fa-1x fa-times-circle fa-fw ml-1\"/>"
+msgstr "Annuler<i class=\"fa fa-1x fa-times-circle fa-fw ml-1\"/>"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__matching_attribute
+msgid "Matching Attribute"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__field_name
+msgid "Odoo Field"
+msgstr "Champ Odoo"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__old_id
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__old_id
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__old_id
+msgid "Old"
+msgstr ""
+
+#. module: smile_auth_cas
+#: code:addons/smile_auth_cas/models/cas_parameter.py:0
+#, python-format
+msgid "Only one cas parameter can be active"
+msgstr "Seule une configuration peut être active"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_attributes_mapping__creation_requirement
+msgid "Required to create user"
+msgstr "Requis pour la création de compte"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__cas_service_url
+msgid "Service URL"
+msgstr "Service URL"
+
+#. module: smile_auth_cas
+#: code:addons/smile_auth_cas/models/res_users.py:0
+#, python-format
+msgid "Some fields are missing for user creation : %s"
+msgstr "Valeurs absentes requises pour la création d'utilisateur: %s"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__token
+msgid "Token"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model_terms:ir.ui.view,arch_db:smile_auth_cas.login_error
+msgid "Try again<i class=\"fa fa-1x fa-arrow-circle-right fa-fw ml-1\"/>"
+msgstr "Essayer à nouveau<i class=\"fa fa-1x fa-arrow-circle-right fa-fw ml-1\"/>"
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_parameter__update_user_attributes
+msgid "Update user attributes"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_cas_token__user_id
+msgid "User"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model.fields,field_description:smile_auth_cas.field_res_users__user_cas_id
+msgid "User CAS id"
+msgstr ""
+
+#. module: smile_auth_cas
+#: model:ir.model,name:smile_auth_cas.model_res_users
+msgid "Users"
+msgstr "Utilisateurs"
+
+#. module: smile_auth_cas
+#: model:ir.model,name:smile_auth_cas.model_cas_token
+msgid "cas.token"
+msgstr ""

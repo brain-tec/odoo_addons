@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils" />
+    <title>Smile Module Auto Update</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="document">
+        <p>
+            <img src="https://img.shields.io/badge/licence-AGPL--3-blue.svg" alt="License: AGPL-3" />
+            <a class="reference external" href="https://github.com/Smile-SA/odoo_addons/tree/18.0/smile_module_auto_update">
+                <img alt="Smile-SA/odoo_addons" src="https://img.shields.io/badge/github-Smile--SA%2Fodoo_addons-lightgray.png?logo=github" />
+            </a>
+        </p>
+
+        <div class="section" id="smile-module-auto-update">
+            <h1>Smile Module Auto Update</h1>
+
+            <p>This module helps you automatically upgrade modules changed since the last server restart.</p>
+
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Automatically detects and upgrades modified modules.</li>
+                <li>Integrates with the <a class="reference external" href="https://apps.odoo.com/apps/modules/16.0/smile_upgrade">smile_upgrade</a> module for pre-load and post-load scripts.</li>
+                <li>Eliminates the need to manually manage the `modules_to_upgrade` list.</li>
+            </ul>
+
+            <p><strong>Table of contents</strong></p>
+            <div class="contents local topic" id="contents">
+                <ul class="simple">
+                    <li><a class="reference internal" href="#requirements" id="toc-entry-1">Requirements</a></li>
+                    <li><a class="reference internal" href="#usage" id="toc-entry-2">Usage</a></li>
+                    <li><a class="reference internal" href="#bug-tracker" id="toc-entry-3">Bug Tracker</a></li>
+                    <li><a class="reference internal" href="#credits" id="toc-entry-4">Credits</a>
+                        <ul>
+                            <li><a class="reference internal" href="#contributors" id="toc-entry-5">Contributors</a></li>
+                            <li><a class="reference internal" href="#maintainer" id="toc-entry-6">Maintainer</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section" id="requirements">
+                <h2><a href="#toc-entry-1">Requirements</a></h2>
+                <p>Ensure the following modules are available in your addons path:</p>
+                <ul>
+                    <li><a class="reference external" href="https://apps.odoo.com/apps/modules/18.0/module_auto_update/">module_auto_update</a></li>
+                    <li><a class="reference external" href="https://apps.odoo.com/apps/modules/18.0/smile_upgrade">smile_upgrade</a></li>
+                </ul>
+            </div>
+
+            <div class="section" id="usage">
+                <h2><a href="#toc-entry-2">Usage</a></h2>
+                <p>Follow these steps to use the Smile Module Auto Update:</p>
+                <ol>
+                    <li>Install the module in your Odoo instance.</li>
+                    <li>Modify the source code of one or more modules in your addons path.</li>
+                    <li>Restart your Odoo server. The Smile Module Auto Update will automatically detect the modified modules and upgrade them.</li>
+                    <li>Check the logs to confirm the successful execution of the module upgrade process.</li>
+                </ol>
+                <p>Below is an example of a successful execution of the Smile Module Auto Update:</p>
+                <div class="image">
+                    <img src="smile_module_auto_update.png" alt="Smile Module Auto Update Execution Success" style="width: 850px;" />
+                </div>
+            </div>
+
+            <div class="section" id="bug-tracker">
+                <h2><a href="#toc-entry-3">Bug Tracker</a></h2>
+                <p>Bugs are tracked on <a class="reference external" href="https://github.com/Smile-SA/odoo_addons/issues">GitHub Issues</a>.
+                In case of trouble, please check there if your issue has already been reported.
+                If you spotted it first, help us smash it by providing detailed and welcomed feedback
+                <a class="reference external" href="https://github.com/Smile-SA/odoo_addons/issues/new?body=module:%20smile_module_auto_update%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">here</a>.</p>
+                <p>Do not contact contributors directly about support or help with technical issues.</p>
+            </div>
+
+            <div class="section" id="credits">
+                <h2><a href="#toc-entry-4">Credits</a></h2>
+                <div class="section" id="contributors">
+                    <h3><a href="#toc-entry-5">Contributors</a></h3>
+                    <ul>
+                        <li>Smile SA Development Team</li>
+                        <li>Isabelle RICHARD</li>
+                    </ul>
+                </div>
+
+                <div class="section" id="maintainer">
+                    <h3><a href="#toc-entry-6">Maintainer</a></h3>
+                    <p>This module is maintained by Smile SA.</p>
+                    <p>Since 1991 Smile has been a pioneer of technology and also the European expert in open source solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="group_dynamic_action_rule_admin" model="res.groups">
+            <field name="name">Dynamic Action Rule Administrator</field>
+            <field name="category_id" ref="base.module_category_administration"/>
+            <field name="implied_ids" eval="[(6, 0, [ref('base.group_system')])]"/>
+        </record>
+
+    </data>
+</odoo>

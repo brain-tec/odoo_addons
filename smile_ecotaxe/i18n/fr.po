@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* smile_ecotaxe
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-20 11:54+0000\n"
+"PO-Revision-Date: 2025-03-20 11:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: smile_ecotaxe
+#: model_terms:ir.ui.view,arch_db:smile_ecotaxe.ecotaxe_purchaseorder_inherit
+msgid "<strong>Unit Ecotaxe</strong>"
+msgstr "<strong>Ecotaxe unitaire</strong>"
+
+#. module: smile_ecotaxe
+#: model:ir.model.fields,field_description:smile_ecotaxe.field_account_bank_statement_line__amount_ecotaxe
+#: model:ir.model.fields,field_description:smile_ecotaxe.field_account_move__amount_ecotaxe
+#: model:ir.model.fields,field_description:smile_ecotaxe.field_product_product__fixed_ecotaxe
+#: model:ir.model.fields,field_description:smile_ecotaxe.field_product_template__fixed_ecotaxe
+#: model:ir.model.fields,field_description:smile_ecotaxe.field_purchase_order__amount_ecotaxe
+msgid "Ecotaxe"
+msgstr "Eco-participation"
+
+#. module: smile_ecotaxe
+#: model:ir.model.fields,field_description:smile_ecotaxe.field_account_move_line__ecotaxe_unit
+#: model:ir.model.fields,field_description:smile_ecotaxe.field_purchase_order_line__ecotaxe_unit
+msgid "Ecotaxe Unit."
+msgstr "Ecotaxe unitaire"
+
+#. module: smile_ecotaxe
+#: model:ir.model,name:smile_ecotaxe.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: smile_ecotaxe
+#: model:ir.model,name:smile_ecotaxe.model_account_move_line
+msgid "Journal Item"
+msgstr "Écriture comptable"
+
+#. module: smile_ecotaxe
+#: model:ir.model.fields,help:smile_ecotaxe.field_product_product__fixed_ecotaxe
+#: model:ir.model.fields,help:smile_ecotaxe.field_product_template__fixed_ecotaxe
+msgid ""
+"Known as ecotaxe, \n"
+"it is an eco-participation supplied by the provider.\n"
+msgstr ""
+"Eco-participation fournie par le fournisseur, \n"
+"dite 'Ecotaxe'."
+
+#. module: smile_ecotaxe
+#: model:ir.model,name:smile_ecotaxe.model_product_template
+msgid "Product"
+msgstr "Produit"
+
+#. module: smile_ecotaxe
+#: model:ir.model,name:smile_ecotaxe.model_purchase_order
+msgid "Purchase Order"
+msgstr "Bon de commande fournisseur"
+
+#. module: smile_ecotaxe
+#: model:ir.model,name:smile_ecotaxe.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Ligne de bon de commande"
+
+#. module: smile_ecotaxe
+#: model:ir.model.fields,field_description:smile_ecotaxe.field_account_move_line__subtotal_ecotaxe
+#: model:ir.model.fields,field_description:smile_ecotaxe.field_purchase_order_line__subtotal_ecotaxe
+msgid "Subtotal Ecotaxe"
+msgstr "Sous-total Ecotaxe"
+
+#. module: smile_ecotaxe
+#: model:ir.model,name:smile_ecotaxe.model_account_tax
+msgid "Tax"
+msgstr "Taxe"
+
+#. module: smile_ecotaxe
+#. odoo-python
+#: code:addons/smile_ecotaxe/models/account_tax.py:0
+msgid "Untaxed Eco-participation"
+msgstr "Eco-participation HT"
+

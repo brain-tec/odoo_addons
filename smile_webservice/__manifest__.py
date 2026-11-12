@@ -4,7 +4,7 @@
 
 {
     "name": "Smile WebService",
-    "version": "17.0.0.1.0",
+    "version": "17.0.0.2.0",
     "depends": ['web'],
     "author": "Smile",
     "license": 'AGPL-3',
@@ -17,7 +17,13 @@
     "data": [
         'security/ir.model.access.csv',
         'views/webservice_call_view.xml',
+        'views/webservice_call_dashboard_view.xml',
     ],
+    "assets": {
+        'web.assets_backend': [
+            'smile_webservice/static/src/**/*',
+        ],
+    },
     "auto_install": False,
     "installable": True,
     "application": False,

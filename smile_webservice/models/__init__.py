@@ -4,4 +4,5 @@
 
 from . import webservice_error
 from . import webservice_call
+from . import webservice_call_dashboard
 from . import base_model

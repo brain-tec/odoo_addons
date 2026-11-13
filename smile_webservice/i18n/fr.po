@@ -287,3 +287,121 @@ msgstr ""
 #: model:ir.model.fields,field_description:smile_webservice.field_webservice_call__xml_namespaces
 msgid "XML namespaces"
 msgstr ""
+
+#. module: smile_webservice
+#. odoo-python
+#: code:addons/smile_webservice/models/webservice_call_dashboard.py:0
+#: model:ir.model.fields,field_description:smile_webservice.field_webservice_call_dashboard__count_total
+#, python-format
+msgid "Calls"
+msgstr "Appels"
+
+#. module: smile_webservice
+#: model:ir.model.fields,field_description:smile_webservice.field_webservice_call_dashboard__count_week
+#: model_terms:ir.ui.view,arch_db:smile_webservice.view_webservice_call_dashboard_kanban
+msgid "Calls this week"
+msgstr "Appels cette semaine"
+
+#. module: smile_webservice
+#. odoo-python
+#: code:addons/smile_webservice/models/webservice_call_dashboard.py:0
+#: model:ir.model.fields,field_description:smile_webservice.field_webservice_call_dashboard__count_error
+#: model_terms:ir.ui.view,arch_db:smile_webservice.view_webservice_call_dashboard_kanban
+#, python-format
+msgid "Errors"
+msgstr "Erreurs"
+
+#. module: smile_webservice
+#. odoo-python
+#: code:addons/smile_webservice/models/webservice_call_dashboard.py:0
+#: model:ir.model.fields,field_description:smile_webservice.field_webservice_call_dashboard__count_week_error
+#: model_terms:ir.ui.view,arch_db:smile_webservice.view_webservice_call_dashboard_kanban
+#, python-format
+msgid "Errors this week"
+msgstr "Erreurs cette semaine"
+
+#. module: smile_webservice
+#. odoo-python
+#: code:addons/smile_webservice/models/webservice_call_dashboard.py:0
+#: model:ir.model.fields,field_description:smile_webservice.field_webservice_call_dashboard__count_pending
+#: model_terms:ir.ui.view,arch_db:smile_webservice.view_webservice_call_dashboard_kanban
+#, python-format
+msgid "Pending"
+msgstr "En attente"
+
+#. module: smile_webservice
+#. odoo-python
+#: code:addons/smile_webservice/models/webservice_call_dashboard.py:0
+#, python-format
+msgid "Undefined"
+msgstr "Non défini"
+
+#. module: smile_webservice
+#: model:ir.model.fields,field_description:smile_webservice.field_webservice_call_dashboard__graph_data
+msgid "Graph Data"
+msgstr "Données du graphique"
+
+#. module: smile_webservice
+#: model:ir.model.fields,field_description:smile_webservice.field_webservice_call_dashboard__last_call_date
+msgid "Last call"
+msgstr "Dernier appel"
+
+#. module: smile_webservice
+#: model_terms:ir.ui.view,arch_db:smile_webservice.view_webservice_call_dashboard_kanban
+msgid "Last call:"
+msgstr "Dernier appel :"
+
+#. module: smile_webservice
+#: model:ir.ui.menu,name:smile_webservice.menu_webservice_dashboard
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#. module: smile_webservice
+#: model_terms:ir.actions.act_window,help:smile_webservice.action_webservice_call_dashboard
+msgid "No webservice call yet"
+msgstr "Aucun appel de webservice pour le moment"
+
+#. module: smile_webservice
+#: model:ir.model,name:smile_webservice.model_webservice_call_dashboard
+msgid "Webservice calls dashboard"
+msgstr "Tableau de bord des appels webservices"
+
+#. module: smile_webservice
+#: model:ir.actions.act_window,name:smile_webservice.action_webservice_call_dashboard
+msgid "Webservices dashboard"
+msgstr "Tableau de bord des webservices"
+
+#. module: smile_webservice
+#. odoo-javascript
+#: code:addons/smile_webservice/static/src/webservice_dashboard_graph/webservice_dashboard_graph_field.xml:0
+#, python-format
+msgid "Weekly calls and errors"
+msgstr "Appels et erreurs par semaine"
+
+#. module: smile_webservice
+#: model_terms:ir.ui.view,arch_db:smile_webservice.view_webservice_call_dashboard_kanban
+msgid "<i class=\"fa fa-check me-1\" title=\"No error\"/><span>No error</span>"
+msgstr "<i class=\"fa fa-check me-1\" title=\"Aucune erreur\"/><span>Aucune erreur</span>"
+
+#. module: smile_webservice
+#: model_terms:ir.ui.view,arch_db:smile_webservice.view_webservice_call_dashboard_kanban
+msgid ""
+"<i class=\"fa fa-exclamation-triangle me-1\" title=\"Errors\"/>\n"
+"                                        <span>See errors</span> ("
+msgstr ""
+"<i class=\"fa fa-exclamation-triangle me-1\" title=\"Erreurs\"/>\n"
+"                                        <span>Voir les erreurs</span> ("
+
+#. module: smile_webservice
+#: model_terms:ir.ui.view,arch_db:smile_webservice.view_webservice_call_dashboard_kanban
+msgid ""
+"<i class=\"fa fa-list me-1\" title=\"Calls\"/>\n"
+"                                        <span>All calls</span> ("
+msgstr ""
+"<i class=\"fa fa-list me-1\" title=\"Appels\"/>\n"
+"                                        <span>Tous les appels</span> ("
+
+#. module: smile_webservice
+#: model_terms:ir.ui.view,arch_db:smile_webservice.view_webservice_call_dashboard_kanban
+msgid "<span>errors</span>"
+msgstr "<span>erreurs</span>"

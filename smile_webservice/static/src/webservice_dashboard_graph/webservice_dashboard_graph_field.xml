@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="smile_webservice.WebserviceDashboardGraphField">
+        <div class="o_webservice_dashboard_graph" t-att-class="props.className">
+            <canvas t-ref="canvas" role="img" aria-label="Weekly calls and errors"/>
+        </div>
+    </t>
+
+</templates>

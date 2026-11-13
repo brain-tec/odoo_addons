@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_webservice_call_dashboard_kanban" model="ir.ui.view">
+            <field name="name">view.webservice.call.dashboard.kanban</field>
+            <field name="model">webservice.call.dashboard</field>
+            <field name="arch" type="xml">
+                <kanban create="false" edit="false" delete="false" group_create="false"
+                        class="o_kanban_dashboard o_webservice_dashboard_kanban"
+                        action="action_open_calls" type="object">
+                    <field name="webservice_type"/>
+                    <field name="name"/>
+                    <field name="count_total"/>
+                    <field name="count_error"/>
+                    <field name="count_pending"/>
+                    <field name="count_week"/>
+                    <field name="count_week_error"/>
+                    <field name="last_call_date"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="d-flex flex-column p-3 gap-3">
+                                <div class="d-flex align-items-start justify-content-between gap-2">
+                                    <div class="overflow-hidden">
+                                        <h4 class="mb-1 text-truncate" t-att-title="record.name.value">
+                                            <field name="name"/>
+                                        </h4>
+                                        <div class="text-muted small" t-if="record.last_call_date.raw_value">
+                                            Last call: <field name="last_call_date"/>
+                                        </div>
+                                    </div>
+                                    <span t-if="record.count_error.raw_value" class="badge rounded-pill text-bg-danger">
+                                        <i class="fa fa-exclamation-triangle me-1" title="Errors"/>
+                                        <t t-out="record.count_error.raw_value"/> <span>errors</span>
+                                    </span>
+                                    <span t-else="" class="badge rounded-pill text-bg-success">
+                                        <i class="fa fa-check me-1" title="No error"/><span>No error</span>
+                                    </span>
+                                </div>
+
+                                <div class="row g-2 text-center">
+                                    <div class="col-4">
+                                        <a type="object" name="action_open_calls" role="button"
+                                           class="o_webservice_dashboard_kpi d-block h-100 rounded border p-2 text-reset">
+                                            <div class="fs-4 fw-bold"><t t-out="record.count_week.raw_value"/></div>
+                                            <div class="small text-muted lh-sm">Calls this week</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a type="object" name="action_open_week_errors" role="button"
+                                           t-attf-class="o_webservice_dashboard_kpi d-block h-100 rounded border p-2 {{ record.count_week_error.raw_value ? 'border-danger text-danger' : 'text-reset' }}">
+                                            <div class="fs-4 fw-bold"><t t-out="record.count_week_error.raw_value"/></div>
+                                            <div class="small lh-sm" t-att-class="record.count_week_error.raw_value ? '' : 'text-muted'">Errors this week</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a type="object" name="action_open_pending" role="button"
+                                           class="o_webservice_dashboard_kpi d-block h-100 rounded border p-2 text-reset">
+                                            <div class="fs-4 fw-bold"><t t-out="record.count_pending.raw_value"/></div>
+                                            <div class="small text-muted lh-sm">Pending</div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <field name="graph_data" widget="webservice_dashboard_graph"/>
+
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button type="object" name="action_open_errors"
+                                            t-attf-class="btn btn-sm {{ record.count_error.raw_value ? 'btn-danger' : 'btn-secondary' }}">
+                                        <i class="fa fa-exclamation-triangle me-1" title="Errors"/>
+                                        <span>See errors</span> (<t t-out="record.count_error.raw_value"/>)
+                                    </button>
+                                    <button type="object" name="action_open_calls" class="btn btn-sm btn-secondary">
+                                        <i class="fa fa-list me-1" title="Calls"/>
+                                        <span>All calls</span> (<t t-out="record.count_total.raw_value"/>)
+                                    </button>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="action_webservice_call_dashboard" model="ir.actions.act_window">
+            <field name="name">Webservices dashboard</field>
+            <field name="res_model">webservice.call.dashboard</field>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="smile_webservice.view_webservice_call_dashboard_kanban"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">No webservice call yet</p>
+            </field>
+        </record>
+
+        <menuitem id="menu_webservice_dashboard" name="Dashboard" parent="menu_parent_webservice"
+                  action="action_webservice_call_dashboard" sequence="10"/>
+
+    </data>
+</odoo>
